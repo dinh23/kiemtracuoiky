@@ -71,8 +71,8 @@ public class HangSanhSu extends HangHoa {
 	}
 	public static String getTieuDe() {
         return String.format("%-10s %-15s %-10s %-10s %10s %10s", 
-        		"Ma hang", "Ten Hang","Don Gia","So Luong Ton","nhà sản xuất",
-        		"Ngày nhập kho");
+        		"Ma hang", "Ten Hang","Don Gia","So Luong Ton","nha san xuat",
+        		"Ngay nhap kho");
 	}
 	
 

@@ -156,11 +156,11 @@ public class DanhSachHangHoa {
 	@Override
 	public String toString() {
 		String s = "";
-		s += "---------------Hàng Thực Phẩm----------------" + "\n";
+		s += "---------------Hang Thuc Pham----------------" + "\n";
 		s += xuatTP() + "\n";
-		s += "---------------Hàng Điện Máy----------------" + "\n";
+		s += "---------------Hang Đien May----------------" + "\n";
 		s += xuatDM() + "\n";
-		s += "---------------Hàng Thực Phẩm----------------" + "\n";
+		s += "---------------Hang Thuc Pham----------------" + "\n";
 		s += xuatSS();
 		return s;
 	}

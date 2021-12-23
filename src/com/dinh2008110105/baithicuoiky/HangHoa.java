@@ -108,6 +108,6 @@ public abstract class HangHoa {
 		return maHang == other.maHang;
 	}
 	public static String getTieuDe() {
-        return String.format("%-10s %-15s %-10s %-10s", "Ma hang", "Ten Hang","So Luong Ton","Đơn giá");
+        return String.format("%-10s %-15s %-10s %-10s", "Ma hang", "Ten Hang","So Luong Ton","Đon gia");
     }
 }

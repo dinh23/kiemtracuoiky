@@ -70,8 +70,8 @@ public class HangDienMay extends HangHoa {
 	}
 	public static String getTieuDe() {
         return String.format("%-10s %-15s %-10s %-10s %10s %10s", 
-        		"Ma hang", "Ten Hang","Don Gia","So Luong Ton","Công Suất",
-        		"Bảo Hành");
+        		"Ma hang", "Ten Hang","Don Gia","So Luong Ton","Cong Suat",
+        		"Bao Hanh");
 	}
 
 

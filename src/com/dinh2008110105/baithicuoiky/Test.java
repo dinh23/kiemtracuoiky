@@ -35,26 +35,26 @@ public class Test {
 		int n;
 		
 		while (true) {
-			System.out.println("\n_____MENU HÀNG HÓA_____");
-			System.out.println("1. In Hàng Hóa");
-			System.out.println("2. Xóa Hàng Hóa Theo mã");
-			System.out.println("3. Sữa hàng Hóa");
-			System.out.println("4. tìm kiếm Ten");
-			System.out.println("5. Tìm kiếm theo giá");
-			System.out.println("6. Tìm kiếm theo Ngày");
-			System.out.println("7. Sắp xếp danh sách tăng dần theo giá ");
-			System.out.println("8. Sắp xếp danh sách giảm dần theo giá ");
-			System.out.println("9. Sắp xếp danh sách tăng dần theo mã");
-			System.out.println("10. Sắp xếp danh sách giảm dần theo mã");
-			System.out.println("11. Tổng Số Lượng Hàng Hóa");
-			System.out.println("12. Tổng Giá Trị Nhập Kho");
-			System.out.println("13. Tổng Số Lượng tuần loại");
-			System.out.println("0. Thoát");
-			System.out.print("\n\tMời nhập lựa chọn: ");
+			System.out.println("\n_____MENU HANG HOA_____");
+			System.out.println("1. In Hang Hoa");
+			System.out.println("2. Xoa Hang Haa Theo ma");
+			System.out.println("3. Sua hang Hoa");
+			System.out.println("4. tim kiem Ten");
+			System.out.println("5. Tim kiem theo gia");
+			System.out.println("6. Tim kiem theo Ngay");
+			System.out.println("7. Sap xep danh sach tang dan theo gia ");
+			System.out.println("8. Sap xep danh sach giam dan theo gia ");
+			System.out.println("9. Sap xep danh sach tang dan theo ma");
+			System.out.println("10. Sap xep danh sach giam dan theo ma");
+			System.out.println("11. Tong So Luong Hang Hoa");
+			System.out.println("12. Tong Gia Tri Nhap Kho");
+			System.out.println("13. Tong So Luong tuan loai");
+			System.out.println("0. Thoat");
+			System.out.print("\n\tMoi nhap lua chon: ");
 			n = sc.nextInt();
 			
 			while (n < 0 || n > 13) {
-				System.out.print("\nNhập lại lựa chọn (0-13): ");
+				System.out.print("\nNhap lai lua chon (0-13): ");
 				n = sc.nextInt();
 			}
 			
@@ -63,91 +63,91 @@ public class Test {
 					System.out.println(a.toString());
 					break;
 				case 2:
-					System.out.println("nhập mã cẫn xóa: ");
+					System.out.println("nhap ma can xoa: ");
 					int maHang = sc.nextInt();
 					if(a.xoaHH(maHang)) {
-                        System.out.println("Xóa thành công");  
+                        System.out.println("Xoa thanh cong");  
                         System.out.println(a);
                     } else {
-                        System.out.println("Xóa không thành công");    
+                        System.out.println("Xoa khong thanh cong");    
                     } 
 					break;
 				case 3:
-					 System.out.print("\nNhập mã hàng: ");
+					 System.out.print("\nNhap ma hang: ");
 	                    sc.nextLine();
 	                    int maHa = sc.nextInt();
-	                    System.out.print("\nNhập đơn giá mới: ");
+	                    System.out.print("\nNhap đon gia moi: ");
 	                    double donGia_moi = sc.nextDouble();
 	                    if (a.suaHH(maHa, donGia_moi)) {
-	                        System.out.println("Sữa thành công");
+	                        System.out.println("Sua thanh cong");
 	                        System.out.println(a);
 	                    } else {
-	                        System.out.println("Sữa không thành công");
+	                        System.out.println("Sua khong thanh cong");
 	                    }
 	                    break;
 				case 4:
-					 System.out.print("\nNhập Tên Cần Tìm: ");
+					 System.out.print("\nNhap Ten Can Tim: ");
 					 sc.nextLine();
 					 String k = sc.nextLine();
 	                    DanhSachHangHoa ds_ten = a.timkiemtheoten(k);
 	                    if (ds_ten.getsize() == 0 ) {
-	                        System.out.println("Không tìm thấy");
+	                        System.out.println("Khong tim thay");
 	                    } else {
-	                        System.out.println("Tìm thấy");
+	                        System.out.println("Tim thay");
 	                        System.out.println(a);
 	                    }
 	                    break;
 				case 5:
-					System.out.println("\nNhập Giá cần tìm kiếm: ");
+					System.out.println("\nNhap Gia can tim kiem: ");
 					double gia = sc.nextDouble();
 					DanhSachHangHoa ds_gia = a.timkiemtheogia(gia);
 					if (ds_gia.getsize() == 0)
-						System.out.println("Không tìm thấy: ");
+						System.out.println("Khong tim thay: ");
 					else
-						System.out.println("Tìm thấy");
+						System.out.println("Tim thay");
 						System.out.println(a);
 					break;
 				case 6:
-					System.out.println("\nNhập ngày cần tìm kiếm: ");
+					System.out.println("\nNhap ngay can tim kiem: ");
 					LocalDate ngay = LocalDate.of(sc.nextInt(), sc.nextInt(), sc.nextInt());
 					DanhSachHangHoa ds_ngay = a.timkiemtheongay(ngay);
 					if(ds_ngay.getsize() == 0)
-						System.out.println("Không tìm thấy: ");
+						System.out.println("Khong tim thay: ");
 					else
-						System.out.println("Tìm thấy");
+						System.out.println("Tim thay");
 						System.out.println(a);
 					break;
 				case 7:
 					a.xapxepdongiatangdan();
-					System.out.println("Sắp xếp thành công!");
+					System.out.println("Sap xep thanh cong!");
 					System.out.println(a);
 					break;
 				case 8:
 					a.xapxepdongiagiamdan();;
-					System.out.println("Sắp xếp thành công!");
+					System.out.println("Sap xep thanh cong!");
 					System.out.println(a);
 					break;
 				case 9:
 					a.xapxepgaynhaptangdan();;
-					System.out.println("Sắp xếp thành công!");
+					System.out.println("Sap xep thanh cong!");
 					System.out.println(a);
 					break;
 				case 10:
 					a.xapxepngaynhapgamdan();
-					System.out.println("Sắp xếp thành công!");
+					System.out.println("Sap xep thanh cong!");
 					System.out.println(a);
 					break;
 				case 11 :
-					System.out.println("	tổng số lượng hàng hóa  "  + a.tongsoluonghanghoa());
+					System.out.println("	tong so luong hang hoa  "  + a.tongsoluonghanghoa());
 					break;
 				case 12 :
-					System.out.println("	tổng số từng loại hàng hóa  " + a.tongtungloai());
+					System.out.println("	tong so tung loai hang hoa  " + a.tongtungloai());
 					break;
 				case 13:
-					System.out.println("	tổng số hàng hóa " + a.getsize());
+					System.out.println("	tong so hang hoa " + a.getsize());
 				case 0:
 					sc.close();
-					System.out.println("\nKết thúc");
+					System.out.println("\nKet thuc");
 					return;
 				}
 			}
